@@ -18,19 +18,21 @@ public class CarrinhoDeCompras {
 
     public void removerItem(String nome){
         List<Item> itensParaRemover = new ArrayList<>();
-
-        for(Item i: carrinho){
-            if(i.getNome().equalsIgnoreCase(nome))
-                itensParaRemover.add(i);
+        if(!carrinho.isEmpty()){
+            for(Item i: carrinho){
+                if(i.getNome().equalsIgnoreCase(nome))
+                    itensParaRemover.add(i);
+            }
         }
-
         carrinho.removeAll(itensParaRemover);
     }
 
     public double calcularValorTotal(){
         double total = 0;
-        for(Item i: carrinho){
-            total += (i.getPreco() * i.getQuantidade());
+        if(!carrinho.isEmpty()){
+            for(Item i: carrinho){
+                total += (i.getPreco() * i.getQuantidade());
+            }
         }
         return total;
     }

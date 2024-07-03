@@ -19,13 +19,15 @@ public class ListaTarefa {
 
     public void removerTarefa(String descricao){
         List<Tarefa> tarefasParaRemover = new ArrayList<>();
-        for(Tarefa t: tarefaList){
-            if(t.getDescricao().equalsIgnoreCase(descricao)){
-                tarefasParaRemover.add(t);
+        if(!tarefaList.isEmpty()){
+            for(Tarefa t: tarefaList){
+                if(t.getDescricao().equalsIgnoreCase(descricao)){
+                    tarefasParaRemover.add(t);
+                }
             }
+            //remove all serve para remover elementos repetidos
+            tarefaList.removeAll(tarefasParaRemover);
         }
-        //remove all serve para remover elementos repetidos
-        tarefaList.removeAll(tarefasParaRemover);
     }
 
     public int obterNumeroTotalTarefas(){
