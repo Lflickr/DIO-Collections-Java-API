@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class ListaTarefa {
     //Atributos
-    Set<Tarefa> tarefaSet;
+    private Set<Tarefa> tarefaSet;
 
     //Construtor
     public ListaTarefa(){

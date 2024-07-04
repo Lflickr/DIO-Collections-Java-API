@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public class Tarefa {
     //Atributos
-    String descricao;
-    boolean concluida;
+    private String descricao;
+    private boolean concluida;
 
     //Construtor
     public Tarefa(String descricao, boolean concluida){

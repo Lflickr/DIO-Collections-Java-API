@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class AgendaContatos {
     //Atributo
-    Set<Contato> contatoSet;
+    private Set<Contato> contatoSet;
 
     //Construtor
     public AgendaContatos(){

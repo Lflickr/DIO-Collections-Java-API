@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public class Contato {
     //Atributos
-    String nome;
-    int numeroTelefone;
+    private String nome;
+    private int numeroTelefone;
 
     //Construtor
     public Contato(String nome, int numeroTelefone){
